@@ -1,0 +1,33 @@
+public class p3 {
+    static int stack[] = new int[10];
+    static int pivot =0;
+    public static void main(String[] args) {
+        int x;
+        push(1);
+        push(3);
+        x = pop(); System.out.printf("%d ", x);
+        push(7);
+        push(8);
+        x = pop(); System.out.printf("%d ", x);
+        x = pop(); System.out.printf("%d ", x);
+        x = pop(); System.out.printf("%d ", x);
+    }
+    static void push(int x)
+    {
+        if (pivot < 10)
+        {
+            stack[pivot] = x;
+            pivot++;
+        }
+    }
+    static int pop()
+    {
+        int y = -1;
+        if (pivot >=1)
+        {
+            pivot--;
+            y = stack[pivot];
+        }
+        return y;
+    }
+}
