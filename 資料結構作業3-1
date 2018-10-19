@@ -1,0 +1,18 @@
+import java.util.Scanner;
+
+public class p1 {
+    public static void main(String[] args) {
+        Scanner scn = new Scanner(System.in);
+        while (scn.hasNext()){
+            int x = scn.nextInt();
+            boolean y = true;
+            for (int i = 2;i < x;i++){
+                if (x%i==0){
+                    y = false;
+                    break;
+                }
+            }
+            System.out.println(y? x+"是質數": x+"不是質數");
+        }
+    }
+}
