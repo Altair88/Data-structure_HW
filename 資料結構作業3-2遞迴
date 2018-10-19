@@ -1,0 +1,12 @@
+public class p2 {
+    public static void main(String[] args) {
+        System.out.println(chris(10));//n
+    }
+    public static long chris(int n){
+        if (n==1||n==2){
+            return 1;
+        }else {
+            return chris(n-1)+chris(n-2);
+        }
+    }
+}
